@@ -41,7 +41,7 @@ document.addEventListener("touchstart",unlockAudio);
 
 // ---------------- COUNTDOWN (UNCHANGED) ----------------
 const timerEl=document.getElementById("timer");
-const targetDate=new Date("2026-02-17T00:00:00").getTime();
+const targetDate=new Date("2026-02-10T00:00:00").getTime();
 
 const countdown=setInterval(()=>{
 const diff=targetDate-Date.now();
