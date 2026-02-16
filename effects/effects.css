@@ -1,0 +1,163 @@
+/* =========================
+   PAGE ENTER ANIMATION
+   ========================= */
+
+.section.active {
+  animation: pageIn 0.6s ease both;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   FLOATING HEARTS (HIGH OPACITY)
+   ========================= */
+
+.floating-heart {
+  position: fixed;
+  bottom: -30px;
+  width: 18px;
+  height: 18px;
+  background: rgba(140, 25, 45, 0.95); /* 🔥 almost solid */
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 1;
+  animation: floatUp linear forwards;
+}
+
+.floating-heart::before,
+.floating-heart::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: rgba(140, 25, 45, 0.95);
+  border-radius: 50%;
+}
+
+.floating-heart::before {
+  top: -9px;
+  left: 0;
+}
+
+.floating-heart::after {
+  left: -9px;
+  top: 0;
+}
+
+/* =========================
+   FLOWER PETALS (LIGHT PINK)
+   ========================= */
+
+.flower-petal {
+  position: fixed;
+  top: -30px;
+  width: 14px;
+  height: 20px;
+  background: rgba(255, 200, 215, 0.7);
+  border-radius: 60% 60% 60% 60%;
+  pointer-events: none;
+  z-index: 1;
+  animation: fallDown linear forwards;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0) rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh) rotate(45deg) scale(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes fallDown {
+  from {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0.75;
+  }
+  to {
+    transform: translateX(var(--drift)) translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   BUTTON LIFE
+   ========================= */
+
+button {
+  animation: buttonBreathe 3.8s ease-in-out infinite;
+}
+
+@keyframes buttonBreathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+/* =========================
+   WELCOME TEXT GLOW
+   ========================= */
+
+#welcome h1 {
+  animation: textGlow 2.2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 6px rgba(140, 25, 45, 0.55),
+      0 0 14px rgba(140, 25, 45, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(140, 25, 45, 0.85),
+      0 0 24px rgba(140, 25, 45, 0.65);
+  }
+}
+
+/* =========================
+   FIREWORKS (UNCHANGED)
+   ========================= */
+
+.firework {
+  position: fixed;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: currentColor;
+  box-shadow:
+    0 0 8px currentColor,
+    0 0 18px currentColor;
+  animation: explode 1.4s ease-out forwards;
+}
+
+@keyframes explode {
+  from {
+    transform: translate(0, 0) scale(1.1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--x), var(--y)) scale(0.2);
+    opacity: 0;
+  }
+}
