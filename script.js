@@ -9,7 +9,7 @@ sections.forEach((s,i)=>s.classList.toggle("active",i===0));
 const welcomeAudio=new Audio("assets/audio/welcome.mp3");
 welcomeAudio.volume=0.35;
 
-const herWorldAudio=new Audio("assets/audio/Her-world.mp3");
+const HerWorldAudio=new Audio("assets/audio/Her-world.mp3");
 HerWorldAudio.loop=true;
 HerWorldAudio.volume=0.35;
 
@@ -26,7 +26,7 @@ let audioUnlocked=false;
 function unlockAudio(){
 if(audioUnlocked) return;
 
-[welcomeAudio,herWorldAudio,letterAudio,finalAudio].forEach(a=>{
+[welcomeAudio,HerWorldAudio,letterAudio,finalAudio].forEach(a=>{
 a.play().then(()=>{a.pause();a.currentTime=0}).catch(()=>{});
 });
 
@@ -86,12 +86,12 @@ setTimeout(createBalloons,300);
 // ---------------- AUDIO CONTROL ----------------
 function handleAudioForSection(){
 
-[welcomeAudio,herWorldAudio,letterAudio,finalAudio]
+[welcomeAudio,HerWorldAudio,letterAudio,finalAudio]
 .forEach(a=>{a.pause();a.currentTime=0});
 
 const activeId=sections[current].id;
 
-if(activeId==="world") herWorldAudio.play().catch(()=>{});
+if(activeId==="world") HerWorldAudio.play().catch(()=>{});
 if(activeId==="letter") letterAudio.play().catch(()=>{});
 if(activeId==="final") finalAudio.play().catch(()=>{});
 }
@@ -103,7 +103,7 @@ function flip(card){
 const video=card.querySelector("video");
 const allCards=document.querySelectorAll(".card");
 
-[welcomeAudio,herWorldAudio,letterAudio,finalAudio]
+[welcomeAudio,HerWorldAudio,letterAudio,finalAudio]
 .forEach(a=>a.pause());
 
 allCards.forEach(c=>{
