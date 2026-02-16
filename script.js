@@ -9,9 +9,9 @@ sections.forEach((s,i)=>s.classList.toggle("active",i===0));
 const welcomeAudio=new Audio("assets/audio/welcome.mp3");
 welcomeAudio.volume=0.35;
 
-const herWorldAudio=new Audio("assets/audio/her-world.mp3");
-herWorldAudio.loop=true;
-herWorldAudio.volume=0.35;
+const herWorldAudio=new Audio("assets/audio/Her-world.mp3");
+HerWorldAudio.loop=true;
+HerWorldAudio.volume=0.35;
 
 const letterAudio=new Audio("assets/audio/letter-song.mp3");
 letterAudio.volume=0.22;
