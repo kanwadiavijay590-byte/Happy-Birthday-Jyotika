@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Jyotika</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="effects/effects.css" />
+</head>
+
+<body>
+
+<!-- COUNTDOWN -->
+<section class="section active" id="countdown">
+<h1 id="timer">00 : 00 : 00 : 00</h1>
+<p>Something made just for you</p>
+</section>
+
+<!-- WELCOME -->
+<section class="section" id="welcome">
+<h1>Happy Birthday Jyotika</h1>
+<p>Many Many Happy Returns Of The Day.</p>
+<button onclick="nextSection()">Enter</button>
+</section>
+
+<!-- HER WORLD (BALLOONS) -->
+<section class="section" id="world">
+<h2>Pop The Balloons 🎈</h2>
+<p class="hint">Each balloon hides one word</p>
+
+<div id="balloon-area"></div>
+<div id="sentenceReveal"></div>
+
+<button onclick="nextSection()">Next</button>
+</section>
+
+<!-- MOMENTS -->
+<section class="section" id="moments">
+<h2>Moments</h2>
+<p class="hint">I Wish You Always Keep Smiling Like This</p>
+
+<div class="cards">
+<div class="card" onclick="flip(this)">
+<div class="card-inner">
+<div class="card-front">
+<img src="assets/images/memory1.jpg">
+</div>
+<div class="card-back">
+<video src="assets/videos/memory1.mp4" playsinline></video>
+</div>
+</div>
+</div>
+
+<div class="card" onclick="flip(this)">
+<div class="card-inner">
+<div class="card-front">
+<img src="assets/images/memory2.jpg">
+</div>
+<div class="card-back">
+<video src="assets/videos/memory2.mp4" playsinline></video>
+</div>
+</div>
+</div>
+
+<div class="card" onclick="flip(this)">
+<div class="card-inner">
+<div class="card-front">
+<img src="assets/images/memory3.jpg">
+</div>
+<div class="card-back">
+<video src="assets/videos/memory3.mp4" playsinline></video>
+</div>
+</div>
+</div>
+</div>
+
+<button onclick="nextSection()">Click on Image</button>
+</section>
+
+<!-- LETTER -->
+<section class="section" id="letter">
+<h2>Happy Birthday Jyotika 🎂</h2>
+<p class="letter">Today is all about you — the laughs, the smiles, the little chaos, everything. I just hope this year brings you more happiness than you expect, more peace than you ask for, and moments that make life feel genuinely beautiful.
+You deserve good things, good people, and days that feel light. Keep being exactly who you are — the world honestly feels a bit better with you in it.
+Have the happiest birthday.
+Really.</p>
+<button onclick="nextSection()">Next</button>
+</section>
+
+<!-- FINAL -->
+<section class="section" id="final">
+<h1>Have A Great Birthday</h1>
+<p>Wherever life takes you next,
+I hope it treats you gently.</p>
+</section>
+
+<script src="script.js"></script>
+<script src="effects/effects.js"></script>
+
+</body>
+</html>
